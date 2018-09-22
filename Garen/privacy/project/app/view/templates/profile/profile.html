@@ -1,0 +1,43 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="margin-bottom: 0px;"  ng-controller="profileController">
+    <a class="navbar-brand" href="#">Aalto Video Conference Chatting</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+        </form>
+
+        <div ng-if="!logState">
+            <ul class="nav navbar-nav navbar-right">
+
+                   <a class="navbar-brand"><span class="glyphicon glyphicon-user"></span>&nbsp;{{username}}</a> &nbsp;&nbsp;&nbsp;&nbsp; <a ng-click="logout()" class="btn btn-primary navbar-brand btn-danger mr-sm-2" style="color: white">
+                    LogOut</a>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+<section class="stage split-list--horizontally" ng-controller="profileController">
+        <ul class="split-list">
+            <li class="left">
+                <a href="#clients" class="button">My Rooms</a>
+                <p>My Rooms has been Created</p>
+            </li>
+            <li class="center">
+                <a href="http://localhost:8008/#!/myroom/{{username}}" class="button" >Create Room</a>
+                <p>Create a New Room.</p>
+            </li>
+            <li class="right">
+                <a href="http://localhost:8080/Salon.html?name={{username}}" class="button">Salon </a>
+                <p>Waiting your Invitation</p>
+            </li>
+        </ul>
+    </section>
+
+

@@ -1,0 +1,72 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary"  style="margin-bottom: 0px;" ng-controller="homeController">
+    <a class="navbar-brand" href="#">Aalto Video Conference Chatting</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+        </form>
+        <div ng-if="logState">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="nav-item"><a ng-click="logout()" class="btn btn-primary btn-danger mr-sm-2"><span class="glyphicon glyphicon-user"></span>
+                    LogOut</a></li>
+            </ul>
+        </div>
+        <div ng-if="!logState">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="nav-item"><a ui-sref="login" ng-click="currentMenu = 'login'" class="btn btn-primary btn-success mr-sm-2">
+                    LogIn</a></li>
+                <li class="nav-item"><a class="btn btn-primary mr-sm-2" ui-sref="registration" ng-click="currentMenu = 'registration'">Create
+                    Account </a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section class="login-block" style="margin-top: 0px">
+    <div class="container" ng-controller="logInController">
+        <div class="row">
+            <div class="col-md-4 login-sec">
+                <h2 class="text-center">Login Now</h2>
+                <form class="login-form">
+                    <div class="form-group">
+                        <label for="username" class="text-uppercase">Username</label>
+                        <input type="text" class="form-control" placeholder="Username" id="username" ng-model="username" >
+
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="text-uppercase">Password</label>
+                        <input type="password" id="password" placeholder="Your Password" ng-model="password" class="form-control">
+                    </div>
+
+
+                    <div class="form-check">
+
+                        <button type="submit" class="btn btn-login float-right" ng-click="logIn()">Submit</button>
+                    </div>
+
+                </form>
+                <div class="copy-text">Aalto Video Conference Chatting </div>
+            </div>
+            <div class="col-md-8 banner-sec">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <img class="d-block img-fluid" src="https://static.pexels.com/photos/33972/pexels-photo.jpg" alt="First slide">
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+</section>

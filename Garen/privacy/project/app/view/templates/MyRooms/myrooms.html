@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary"  ng-controller="homeController">
+    <a class="navbar-brand" href="#">Aalto Video Conference Chatting</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+        </form>
+        <div ng-if="logState">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="nav-item"><a ng-click="logout()" class="btn btn-primary btn-danger mr-sm-2"><span class="glyphicon glyphicon-user"></span>
+                    LogOut</a></li>
+            </ul>
+        </div>
+        <div ng-if="!logState">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="nav-item"><a ui-sref="login" ng-click="currentMenu = 'login'" class="btn btn-primary btn-success mr-sm-2">
+                    LogIn</a></li>
+                <li class="nav-item"><a class="btn btn-primary mr-sm-2" ui-sref="registration" ng-click="currentMenu = 'registration'">Create
+                    Account </a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container"ng-controller="myroomsController">
+<form >
+    <div class="form-group">
+        <label for="Room">NEW ROOM</label>
+        <input type="text" class="form-control" placeholder="Room" id="Room" ng-model="Room">
+        <small id="Roomd" class="form-text text-muted">We'll never share your room with anyone else.</small>
+    </div>
+
+    <button type="submit" class="btn btn-primary" ng-click="roomsform()">Submit</button>
+</form>
+    <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action active">
+            List My rooms
+        </a>
+        <a  ng-repeat="list in listroom" class="list-group-item list-group-item-action" href="http://localhost:8080/?name={{username}}&room={{list.room}}"><span class="glyphicon glyphicon-home"></span> &nbsp;&nbsp;Room Name :&nbsp;{{list.room}}</a>
+
+    </div>
+
+</div>

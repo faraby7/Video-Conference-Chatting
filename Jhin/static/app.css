@@ -1,0 +1,113 @@
+
+.contactPaneDiv, .contactIcon {
+    height: 64px;
+}
+.contactPaneDiv {
+    box-shadow: -1px 1px 3px 0px #a0a0a0;
+    margin: 10px 0px;
+
+    overflow: hidden;
+}
+.contactTextDiv {
+    margin-left: 10px;
+    position: relative;
+    top: -30px;
+}
+.webix_list_item{
+    border:none;
+}
+.webix_list .webix_list_item.webix_selected{
+    background:transparent;
+}
+.webix_list .webix_list_item.webix_selected div{
+    background: #27ae60;
+}
+
+
+
+.webix_layout_toolbar.webix_toolbar {
+    color: #fff;
+    font-size: 18px;
+    background: red;
+    /* box-shadow: 0 0 black; */
+}
+
+
+.absarea{
+    position: relative;
+}
+
+.mirrorDiv, #mirrorVideo {
+    width: 200px;
+    height: 150px;
+}
+.mirrorDiv {
+    background-color: #EEEEEE;
+    position: absolute;
+    top: 250px; right: 525px; z-index:2;
+    border: 1px solid silver;
+    box-shadow: -1px 1px 3px 0px #a0a0a0;
+}
+
+.status div{
+    text-align: right;
+}
+
+.windowToUniverseDiv {
+    width:400px;
+    height: 300px;
+    position: absolute;
+    top: 20px; left: 20px;
+    background: #DDD;
+    border: 1px solid silver;
+}
+.windowToUniverseDiv1 {
+    width:400px;
+    height: 300px;
+    position: absolute;
+    top: 340px; left: 20px;
+    background: #DDD;
+    border: 1px solid silver;
+}
+.windowToUniverseDiv2{
+    width:400px;
+    height: 300px;
+    position: absolute;
+    top: 20px;
+    left: 450px;
+    background: #DDD;
+    border: 1px solid silver;
+}
+.windowToUniverseDiv3 {
+    width:400px;
+    height: 300px;
+    position: absolute;
+    top: 340px; left: 450px;
+    background: #DDD;
+    border: 1px solid silver;
+}
+#windowToUniverse {
+    width: 400px;
+    height: 300px;
+}
+#windowToUniverse1 {
+    width: 400px;
+    height: 300px;
+}
+#windowToUniverse2 {
+    width: 400px;
+    height: 300px;
+}
+#windowToUniverse3 {
+    width: 400px;
+    height: 300px;
+}
+
+.error {
+    color: red;
+    text-weight: bold;
+}
+
+ .webix_success div{
+     background:#8f9;
+ }

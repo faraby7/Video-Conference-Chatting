@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary"  ng-controller="homeController">
+    <a class="navbar-brand" href="#">Aalto Video Conference Chatting</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+        </form>
+        <div ng-if="logState">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="nav-item"><a ng-click="logout()" class="btn btn-primary btn-danger mr-sm-2"><span class="glyphicon glyphicon-user"></span>
+                    LogOut</a></li>
+            </ul>
+        </div>
+        <div ng-if="!logState">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="nav-item"><a ui-sref="login" ng-click="currentMenu = 'login'" class="btn btn-primary btn-success mr-sm-2">
+                    LogIn</a></li>
+                <li class="nav-item"><a class="btn btn-primary mr-sm-2" ui-sref="registration" ng-click="currentMenu = 'registration'">Create
+                    Account </a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<img  src="https://static.freemake.com/blog/wp-content/uploads/2013/02/group-video-calls-1000x598.jpg" alt="Smiley face" width="100%" height="100%">
+</img>
